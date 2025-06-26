@@ -1,0 +1,205 @@
+html{
+    box-sizing: border-box;
+}
+
+/* Resetare globală pentru toate elementele și pseudo-elementele cu caracteristicile specifice*/
+*,
+* ::before,
+* ::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* Definirea unor variabile în CSS*/
+:root{
+    --background-color:#12372A;
+    --hover-color:#436850;
+    --font-color:#daffff;
+    --accent-color1:#adbc9f2b;
+    --accent-color2:#fbfada46;
+    --accent-color3:#016a70;
+    --accent-color4:#16404D;
+    --border-radius:10px;
+}
+
+
+body{
+    padding-top: 70px;
+    padding: 0;
+    margin: 0;  
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Cod personalizat pentru bara de navigare*/
+.navbar{ 
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    left: 0;
+    z-index: 1050; 
+    background-color:var(--background-color);
+}
+
+.navbar-nav{
+    justify-content: flex-start !important;
+    align-items: flex-start !important; 
+    padding-left: 1rem;
+}
+
+.dropdown-menu{
+    background: var(--background-color);
+    padding: 0 10px;
+}
+
+.nav-link{
+    margin: .312rem;
+    color: var(--font-color);
+}
+
+.nav-link:hover{
+    color: var(--hover-color);
+}
+
+.dropdown-item:hover{
+    background: none;
+}
+
+.dropdown-item:active{
+    color: inherit;
+    background-color: none;
+}
+
+.navbar-toggler:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+/* Bara de navigare adaptată pentru ecranele <768px */
+@media(max-width:767px){
+    body.navbar-open{
+        padding-top:356px;
+    }
+
+    .navbar-nav{
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color:var(--background-color);
+        overflow-y: auto;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .navbar-collapse.show{
+        overflow-y: auto;
+        padding-top: 0px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .dropdown-item:hover{
+        background: none;
+    }
+
+
+
+    .navbar-nav .nav-link{
+        padding: 15px 0;
+        color: white !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link:hover{
+        color: var(--hover-color)!important;
+    }
+
+    .nav-link{
+        margin: 0;
+    }
+}
+
+/* Cod personalizat pentru secțiunea hero a paginii acasă */
+
+.hero-section-with-bg{
+    min-height: calc(100vh - 80px);
+    padding-top: 80px;
+    overflow: hidden;
+    z-index: 0;
+    filter:brightness(0.6);
+    background: var(--background-color);
+}
+
+
+.btn:hover{
+    color: var(--hover-color);
+}
+
+/* Cod personalizat pentru secțiunea "Cine suntem noi?" */
+
+.homeContent{
+    background-color: var(--accent-color1);
+    padding: 20px;
+    line-height: 1.9;
+    border-radius: var(--border-radius);
+}
+/* Cod personalizat pentru secțiunea "De ce să ne alegi pe noi?" */
+/* Cod personalizat pentru antetul paginii */
+
+footer{
+    background: var(--background-color);
+}
+
+
+
+
+
+
+.form-label {
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 75%; /* Raport de aspect 4:3 (400px înălțime / 533px lățime la 100% lățime) */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px; /* Îi dăm și hărții colțuri rotunjite */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ajustare pentru ecrane mai mici, unde coloanele se suprapun */
+@media (max-width: 767.98px) {
+    .container {
+        padding: 20px;
+    }
+    .map-container {
+        padding-bottom: 60%; /* Ajustează raportul de aspect pentru ecrane mici */
+    }
+}
