@@ -43,8 +43,9 @@
         <h2 class="display-2 fw-bold text-center mt-5 mb-5">Contactează-ne</h2>
         <div id="alertMessage" class="alert d-none" role="alert"></div>
 
+    <!-- Cod pentru crearea formularului de contact -->
         <div class="row">
-            <div class="col-md-6"> <form id="contactForm" novalidate>
+            <div class="col-md-6"> <form id="contactForm" validate>
                     <div class="mb-3">
                         <label for="name" class="form-label">Nume complet</label>
                         <input type="text" class="form-control" id="name" name="name" required>
@@ -93,6 +94,7 @@
                 </form>
             </div>
 
+    <!-- Cod penntru crearea hărții -->
             <div class="col-md-6 mt-4 mt-md-0 d-flex flex-column justify-content-center"> <div class="map-container">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2712.923880295111!2d27.5878847!3d47.1557997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c9f131a29f8f2b%3A0x8e8e8e8e8e8e8e8e!2sPalas%20Mall%20Ia%C8%99i!5e0!3m2!1sro!2sro!4v1678901234567!5m2!1sro!2sro"
@@ -104,6 +106,7 @@
         </div>
     </div>
 
+    <!-- Cod pentru crearea ferestrei cu termenii și condițiile -->
     <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
@@ -117,7 +120,7 @@
                     <p>Ne rezervăm dreptul de a modifica acești termeni în orice moment.</p>
                     </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Închide</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Închide</button>
                 </div>
             </div>
         </div>

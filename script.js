@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
             formIsValid = false;
         }
 
-        // NOU: Validare pentru checkbox-ul de Termeni și Condiții
+        // Validare pentru checkbox-ul de Termeni și Condiții
         if (!termsCheckbox.checked) {
             termsCheckbox.classList.add('is-invalid');
             formIsValid = false;
