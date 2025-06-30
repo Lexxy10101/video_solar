@@ -231,7 +231,8 @@ footer{
     .container {
         padding: 20px;
     }
-    .map-container {
-        padding-bottom: 60%; /* Ajustează raportul de aspect pentru ecrane mici */
+    .map-container iframe{
+        padding-bottom: 10%; /* Ajustează raportul de aspect pentru ecrane mici */
+        margin-left: 5px;
     }
 }
